@@ -1,7 +1,7 @@
 import React from 'react';
 
 const page = () => {
-  return <div className='text-blue-300'>page</div>;
+  return <div className='text-black-100'>page</div>;
 };
 
 export default page;

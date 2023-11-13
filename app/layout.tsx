@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import { Inter, Space_Grotesk } from 'next/font/google';
 import './globals.css';
+import Navbar from '@/components/Navbar';
+import React from 'react';
 
 const inter = Inter({ subsets: ['latin'] });
 const spaceGrotesk = Space_Grotesk({
@@ -14,14 +16,34 @@ export const metadata: Metadata = {
     'Track product prices effortlessly and save money on your online shopping.',
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+// export default function RootLayout({
+//   children,
+// }: {
+//   children: React.ReactNode;
+// }) {
+//   console.log(inter, 'inter');
+
+//   return (
+//     <html lang='en'>
+//       <body className={inter.className}>
+//         <Navbar />
+
+//         {children}
+//       </body>
+//     </html>
+//   );
+// }
+const RootLayout = ({ children }: { children: React.ReactNode }) => {
+  console.log(inter, 'inter');
   return (
     <html lang='en'>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Navbar />
+
+        {children}
+      </body>
     </html>
   );
-}
+};
+
+export default RootLayout;
