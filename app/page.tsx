@@ -42,9 +42,9 @@ const page = () => {
           ))}
         </div> */}
         <h1>User navigation</h1>
-        <Link href={'/fetch'} className='bg-purple-50 pt-3 px-6'>
-          Navigate to fetch
-        </Link>
+        {/* <Link href={'/fetch'} className=''> */}
+        <button className='!btn btn-primary'>Fetchs </button>
+        {/* </Link> */}
       </section>
     </>
   );
